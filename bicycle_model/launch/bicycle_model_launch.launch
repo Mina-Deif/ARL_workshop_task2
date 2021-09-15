@@ -1,0 +1,4 @@
+<launch>
+	<node name="velocity_steering_driver.py" pkg="bicycle_model" type="velocity_steering_driver.py" output="screen"/>
+	<node name="model.py" pkg="bicycle_model" type="model.py" output="screen"/>
+</launch>
