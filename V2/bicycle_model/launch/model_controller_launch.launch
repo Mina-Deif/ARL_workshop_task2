@@ -1,0 +1,6 @@
+<launch>
+	<node name="model.py" pkg="bicycle_model" type="model.py" output="screen"/>
+	<node name="path_generator.py" pkg="bicycle_model" type="path_generator.py" output="screen"/>
+	<node name="pure_pursuit_controller.py" pkg="bicycle_model" type="pure_pursuit_controller.py" output="screen"/>
+	<node pkg="rostopic" type="rostopic" name="rostopic" args="pub /steering_input bicycle_model/velocity_msg 16.0 0"/>
+</launch>
